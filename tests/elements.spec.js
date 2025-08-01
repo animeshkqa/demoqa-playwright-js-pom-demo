@@ -79,7 +79,7 @@ test(
 
 test(
   "TC07_ELEMENTS_pVE Perform Double CLick Action",
-  { tag: ["@sit"] },
+  { tag: ["@sit", "@smoke"] },
   async () => {
     await elementsPO.clickButtonsLink();
     expect(await elementsPO.buttonsTab.performDoubleClickAction()).toBeTruthy();
@@ -88,7 +88,7 @@ test(
 
 test(
   "TC08_ELEMENTS_pVE Perform Right CLick Action",
-  { tag: ["@sit", "@smoke"] },
+  { tag: ["@sit"] },
   async () => {
     expect(await elementsPO.buttonsTab.performRightClickAction()).toBeTruthy();
   },
