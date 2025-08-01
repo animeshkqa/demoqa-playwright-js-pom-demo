@@ -1,0 +1,24 @@
+{
+  "name": "demoqa-playwright-js-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test --config=config/playwright.config.js",
+    "test:headed": "npx playwright test --headed --config=config/playwright.config.js",
+    "test:report": "npx playwright show-report reports/playwright-report",
+    "test:sit": "npx playwright test --config=config/playwright.config.js --grep=@sit",
+    "test:smoke": "npx playwright test --config=config/playwright.config.js --grep=@smoke"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "prettier": "^3.6.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "exceljs": "^4.4.0"
+  }
+}

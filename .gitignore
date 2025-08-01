@@ -1,0 +1,23 @@
+#IDE specific Files
+.idea/
+
+# Node modules
+node_modules/
+
+# Playwright test reports
+reports/
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# Mac system files
+.DS_Store
+
+# Coverage reports
+coverage/
+
+# VSCode settings (optional)
+.vscode/
