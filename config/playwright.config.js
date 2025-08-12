@@ -9,6 +9,7 @@ export default defineConfig({
   retries: 0,
   reporter: [
     ["html", { outputFolder: "../reports/playwright-report", open: "never" }],
+    ["junit", { outputFile: "../reports/playwright-report/test-results.xml" }],
   ],
   outputDir: "../reports/test-results",
   use: {
