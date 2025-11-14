@@ -20,16 +20,20 @@ test.afterAll(async () => {
   await page.close();
 });
 
-test(
-  "TC01_WIDGETS_pVE Get Mouse Hover Tool Tips Text and Verify",
-  { tag: ["@sit"] },
-  async () => {
-    await widgetsPagePO.clickToolTipsLink();
-    expect(await widgetsPagePO.checkToolTipsTxtOnHover()).toBeTruthy();
-  },
-);
+test.describe("Widgets Tests", () => {
+  test.describe.configure({ mode: "parallel" });
 
-test("TC02_WIDGETS_pVE Pick a date", { tag: ["@sit"] }, async () => {
-  await widgetsPagePO.clickDatePickerLink();
-  expect(await widgetsPagePO.pickADate()).toBeTruthy();
+  test(
+    "TC01_WIDGETS_pVE Get Mouse Hover Tool Tips Text and Verify",
+    { tag: ["@sit"] },
+    async () => {
+      await widgetsPagePO.clickToolTipsLink();
+      expect(await widgetsPagePO.checkToolTipsTxtOnHover()).toBeTruthy();
+    },
+  );
+
+  test("TC02_WIDGETS_pVE Pick a date", { tag: ["@sit"] }, async () => {
+    await widgetsPagePO.clickDatePickerLink();
+    expect(await widgetsPagePO.pickADate()).toBeTruthy();
+  });
 });

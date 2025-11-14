@@ -39,7 +39,7 @@ export class ElementsPagePO extends BasePagePO {
   }
 
   async clickCheckBoxLink() {
-    await this.waitAndClick(this.page.getByText(`Check Box`));
+    await this.waitAndClick(this.page.getByRole(`listitem`).filter({ hasText: `Check Box` }));
   }
 
   async clickRadioButtonLink() {
@@ -51,7 +51,7 @@ export class ElementsPagePO extends BasePagePO {
   }
 
   async clickButtonsLink() {
-    await this.waitAndClick(this.page.getByText(`Buttons`));
+    await this.waitAndClick(this.page.getByRole(`listitem`).filter({ hasText: `Buttons` }));
   }
 
   async clickLinksLink() {

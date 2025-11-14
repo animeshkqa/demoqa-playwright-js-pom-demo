@@ -13,7 +13,7 @@ export default defineConfig({
   ],
   outputDir: "../reports/test-results",
   use: {
-    headless: true,
+    headless: false,
     viewport: { width: 1366, height: 768 },
     screenshot: "only-on-failure",
     video: "retain-on-failure",
